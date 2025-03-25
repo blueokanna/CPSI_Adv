@@ -1,0 +1,14 @@
+[package]
+name = "CPSI_Adv"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+curve25519-dalek = { version = "4.1.3", features = ["digest"] }
+rand_core = { version = "0.9.3", features = ["os_rng"] }
+bloom = { version = "0.3.2" }
+blake3 = "1.7.0"
+rayon = "1.10.0"
+zeroize = "1.8.1"
+num-bigint = "0.4.6"
+rand = "0.9.0"
