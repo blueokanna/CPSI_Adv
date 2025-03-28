@@ -439,8 +439,6 @@ fn random_update_participants(
                     let remove_idx = (rand_val as usize) % available.len();
                     let removed = available[remove_idx].clone();
                     participant.elements.remove(&removed);
-                } else {
-                    println!("    - 无元素可删除，跳过删除操作。");
                 }
             } else {
                 let not_in: Vec<_> = union_candidates
@@ -452,8 +450,6 @@ fn random_update_participants(
                     let add_idx = (rand_val as usize) % not_in.len();
                     let to_add = not_in[add_idx].clone();
                     participant.elements.insert(to_add);
-                } else {
-                    println!("    + 所有候选元素均已存在，跳过添加操作。");
                 }
             }
         }
